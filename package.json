@@ -1,0 +1,13 @@
+{
+  "name": "tecnologia-clone",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Pixel-perfect offline clone of the Tecnologia IT Solutions template",
+  "scripts": {
+    "start": "node server.mjs",
+    "serve": "npx serve ."
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2"
+  }
+}
