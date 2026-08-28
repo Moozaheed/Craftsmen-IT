@@ -679,3 +679,195 @@
     white-space: nowrap !important;
   }
 }
+
+
+/* Testimonials Review Badges Alignment (Clutch & Google) on Mobile */
+@media (max-width: 767px) {
+  /* Parent row containing both review badges */
+  .elementor-146 .elementor-element.elementor-element-dda5d6d .elementor-element-a80e61e > .elementor-widget-wrap {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+    padding-top: 25px !important;
+    margin-top: 25px !important;
+  }
+
+  /* Reset individual border & padding on Clutch & Google widget containers */
+  .elementor-146 .elementor-element.elementor-element-9a146bc,
+  .elementor-element.elementor-element-9a146bc,
+  .elementor-146 .elementor-element.elementor-element-ca2daa0,
+  .elementor-element.elementor-element-ca2daa0 {
+    display: inline-flex !important;
+    width: 48% !important;
+    max-width: 48% !important;
+    vertical-align: top !important;
+    margin: 0 1% !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+  }
+
+  .elementor-146 .elementor-element.elementor-element-9a146bc > .elementor-widget-container,
+  .elementor-element.elementor-element-9a146bc > .elementor-widget-container,
+  .elementor-146 .elementor-element.elementor-element-ca2daa0 > .elementor-widget-container,
+  .elementor-element.elementor-element-ca2daa0 > .elementor-widget-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* Templates & internal wrappers */
+  .elementor-element-9a146bc .elementor-template,
+  .elementor-element-ca2daa0 .elementor-template,
+  .elementor-element-9a146bc section,
+  .elementor-element-ca2daa0 section,
+  .elementor-element-9a146bc .elementor-container,
+  .elementor-element-ca2daa0 .elementor-container,
+  .elementor-element-9a146bc .elementor-column,
+  .elementor-element-ca2daa0 .elementor-column,
+  .elementor-element-9a146bc .elementor-widget-wrap,
+  .elementor-element-ca2daa0 .elementor-widget-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Clutch Review Elements */
+  .elementor-element-9a146bc .elementor-element-9106ea2 {
+    width: 100% !important;
+    margin: 0 0 4px 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+  .elementor-element-9a146bc .elementor-element-9106ea2 .elementor-heading-title {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    color: #4B5563 !important;
+    margin: 0 !important;
+  }
+  .elementor-element-9a146bc .elementor-element-6813db6 {
+    width: 100% !important;
+    margin: 0 0 6px 0 !important;
+    padding: 0 !important;
+  }
+  .elementor-element-9a146bc .elementor-element-6813db6 .elementor-star-rating {
+    display: flex !important;
+    justify-content: center !important;
+    font-size: 13px !important;
+    line-height: 1 !important;
+  }
+  .elementor-element-9a146bc .elementor-element-b1ac84e {
+    display: none !important;
+  }
+  .elementor-element-9a146bc .elementor-element-a41418a {
+    width: 100% !important;
+    margin: 0 0 4px 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+  .elementor-element-9a146bc .elementor-element-a41418a img {
+    max-width: 72px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  .elementor-element-9a146bc .elementor-element-7ad2ade {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+  .elementor-element-9a146bc .elementor-element-7ad2ade .elementor-heading-title {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    color: #4B5563 !important;
+    margin: 0 !important;
+  }
+
+  /* Google Review Elements */
+  .elementor-element-ca2daa0 .elementor-element-f79d456 {
+    width: 100% !important;
+    margin: 0 0 4px 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+  .elementor-element-ca2daa0 .elementor-element-f79d456 img {
+    width: 28px !important;
+    height: 28px !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  .elementor-element-ca2daa0 .elementor-element-d272f68 {
+    width: auto !important;
+    margin: 0 0 4px 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+  .elementor-element-ca2daa0 .elementor-element-d272f68 > .elementor-widget-container {
+    background-color: #FEF08A !important;
+    color: #111827 !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    margin: 0 auto !important;
+    display: inline-block !important;
+  }
+  .elementor-element-ca2daa0 .elementor-element-d272f68 .elementor-heading-title {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    color: #111827 !important;
+    margin: 0 !important;
+  }
+  .elementor-element-ca2daa0 .elementor-element-239f68f {
+    width: 100% !important;
+    margin: 0 0 4px 0 !important;
+    padding: 0 !important;
+  }
+  .elementor-element-ca2daa0 .elementor-element-239f68f .elementor-star-rating {
+    display: flex !important;
+    justify-content: center !important;
+    font-size: 13px !important;
+    line-height: 1 !important;
+  }
+  .elementor-element-ca2daa0 .elementor-element-6446ab1 {
+    display: none !important;
+  }
+  .elementor-element-ca2daa0 .elementor-element-3895fcf {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+  .elementor-element-ca2daa0 .elementor-element-3895fcf > .elementor-widget-container {
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+  .elementor-element-ca2daa0 .elementor-element-3895fcf .elementor-heading-title {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    color: #4B5563 !important;
+    margin: 0 !important;
+  }
+}
+
