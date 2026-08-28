@@ -2,6 +2,7 @@ import http from 'http';
 import https from 'https';
 import fs from 'fs';
 import path from 'path';
+import zlib from 'zlib';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -79,11 +80,41 @@ function handler(req, res) {
   if (fs.existsSync(filePath) && !fs.statSync(filePath).isDirectory()) {
     const ext = path.extname(filePath).toLowerCase();
     const contentType = mimeTypes[ext] || 'application/octet-stream';
-    res.writeHead(200, {
+    const acceptEncoding = req.headers['accept-encoding'] || '';
+
+    // Cache-Control headers
+    let cacheControl = 'public, max-age=86400';
+    if (ext === '.html' || pathname === '/sw.js') {
+      cacheControl = 'public, max-age=0, must-revalidate';
+    } else if (['.woff2', '.woff', '.ttf', '.png', '.jpg', '.jpeg', '.webp', '.svg', '.ico'].includes(ext)) {
+      cacheControl = 'public, max-age=31536000, immutable';
+    }
+
+    const headers = {
       'Content-Type': contentType,
-      'Access-Control-Allow-Origin': '*'
-    });
-    fs.createReadStream(filePath).pipe(res);
+      'Access-Control-Allow-Origin': '*',
+      'Cache-Control': cacheControl,
+      'X-Content-Type-Options': 'nosniff'
+    };
+
+    if (pathname === '/sw.js') {
+      headers['Service-Worker-Allowed'] = '/';
+    }
+
+    const isCompressible = contentType.startsWith('text/') || contentType.includes('javascript') || contentType.includes('json') || contentType.includes('svg');
+
+    if (isCompressible && acceptEncoding.includes('gzip')) {
+      headers['Content-Encoding'] = 'gzip';
+      res.writeHead(200, headers);
+      fs.createReadStream(filePath).pipe(zlib.createGzip()).pipe(res);
+    } else if (isCompressible && acceptEncoding.includes('deflate')) {
+      headers['Content-Encoding'] = 'deflate';
+      res.writeHead(200, headers);
+      fs.createReadStream(filePath).pipe(zlib.createDeflate()).pipe(res);
+    } else {
+      res.writeHead(200, headers);
+      fs.createReadStream(filePath).pipe(res);
+    }
   } else {
     res.writeHead(404, { 'Content-Type': 'text/plain' });
     res.end('404 Not Found');
@@ -94,7 +125,7 @@ function startServer(port) {
   const server = http.createServer(handler);
   server.listen(port, () => {
     console.log(`\n======================================================`);
-    console.log(`🚀 Craftsmen.it Site is live at: http://localhost:${port}`);
+    console.log(`🚀 Craftsmen.it Fast Server is live at: http://localhost:${port}`);
     console.log(`======================================================\n`);
   }).on('error', (err) => {
     if (err.code === 'EADDRINUSE') {
