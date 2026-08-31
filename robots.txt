@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Block WordPress admin and internal paths
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-json/
+Disallow: /feed/
+Disallow: /comments/feed/
+Disallow: /cdn-cgi/
+Disallow: /author/
+Disallow: /*/feed/
+
+# Sitemap
+Sitemap: https://craftsmenit.com/sitemap.xml

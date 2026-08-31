@@ -496,3 +496,282 @@ html.ios-safari .elementor-widget-tabs.vamtam-has-theme-widget-styles.vamtam-for
   }
 }
 
+/* ==========================================================================
+   PREMIER FOOTER CLEANUP - PERFECT CONTINUOUS BORDERS & ALIGNMENT
+   ========================================================================== */
+
+.elementor-element.elementor-element-40daad3 .elementor-widget-wrap,
+.elementor-element.elementor-element-40daad3 .elementor-element-populated,
+.elementor-element.elementor-element-40daad3 .elementor-divider,
+.elementor-element.elementor-element-3708d21,
+.elementor-element.elementor-element-af4dbec,
+.elementor-element.elementor-element-b1ac84e {
+  border: none !important;
+}
+
+.elementor-element.elementor-element-40daad3 .elementor-divider,
+.elementor-element.elementor-element-3708d21,
+.elementor-element.elementor-element-af4dbec,
+.elementor-element.elementor-element-b1ac84e {
+  display: none !important;
+}
+
+.elementor-element.elementor-element-40daad3 .elementor-widget-wrap,
+.elementor-element.elementor-element-40daad3 .elementor-element-populated {
+  display: flex !important;
+}
+
+@media (max-width: 767px) {
+  /* White Card Container */
+  .elementor-element.elementor-element-40daad3 {
+    padding: 24px 16px 20px 16px !important;
+    background-color: #ffffff !important;
+    border-top: 1px solid #eef0f4 !important;
+  }
+  
+  .elementor-element.elementor-element-40daad3 > .elementor-container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  /* ----------------------------------------------------
+     ROW 1: Clutch Reviews Badge (Full Width, Centered)
+     ---------------------------------------------------- */
+  .elementor-element.elementor-element-2f049f8 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 0 18px 0 !important;
+    margin: 0 0 18px 0 !important;
+    border-bottom: 1px solid #eef0f4 !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+  }
+
+  .elementor-element.elementor-element-2f049f8 .elementor-widget-wrap,
+  .elementor-element.elementor-element-2f049f8 .elementor-element-populated {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px 12px !important;
+    width: 100% !important;
+    text-align: center !important;
+    border: none !important;
+  }
+
+  .elementor-element.elementor-element-2f049f8 .elementor-widget {
+    width: auto !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+
+  /* ----------------------------------------------------
+     ROW 2: Locations & Contact Info (Side by Side 50/50 Equal Height)
+     ---------------------------------------------------- */
+  .elementor-element.elementor-element-5686166 {
+    width: 50% !important;
+    max-width: 50% !important;
+    flex: 0 0 50% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0 8px 18px 0 !important;
+    margin: 0 0 18px 0 !important;
+    border-bottom: 1px solid #eef0f4 !important;
+    border-right: 1px solid #eef0f4 !important;
+    border-top: none !important;
+    border-left: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .elementor-element.elementor-element-a88df03 {
+    width: 50% !important;
+    max-width: 50% !important;
+    flex: 0 0 50% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0 0 18px 8px !important;
+    margin: 0 0 18px 0 !important;
+    border-bottom: 1px solid #eef0f4 !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .elementor-element.elementor-element-5686166 .elementor-widget-wrap,
+  .elementor-element.elementor-element-5686166 .elementor-element-populated {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+  }
+
+  .elementor-element.elementor-element-5686166 p {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    margin: 0 !important;
+    font-weight: 600 !important;
+    color: #111827 !important;
+  }
+
+  .elementor-element.elementor-element-a88df03 .elementor-widget-wrap,
+  .elementor-element.elementor-element-a88df03 .elementor-element-populated {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    gap: 4px !important;
+    border: none !important;
+  }
+
+  .elementor-element.elementor-element-a88df03 .elementor-widget {
+    margin: 0 !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .elementor-element.elementor-element-a88df03 .elementor-button {
+    padding: 0 !important;
+    background: transparent !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: #111827 !important;
+    text-align: center !important;
+    justify-content: center !important;
+    display: inline-flex !important;
+    line-height: 1.4 !important;
+  }
+
+  /* ----------------------------------------------------
+     ROW 3: Social Media Icons (Single Clean 4-Column Row)
+     ---------------------------------------------------- */
+  .elementor-element.elementor-element-562f9e3 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    border: none !important;
+  }
+
+  .elementor-element.elementor-element-562f9e3 .elementor-widget-wrap,
+  .elementor-element.elementor-element-562f9e3 .elementor-element-populated {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+    gap: 8px !important;
+    border: none !important;
+  }
+
+  .elementor-element.elementor-element-562f9e3 .elementor-widget {
+    flex: 1 1 25% !important;
+    width: 25% !important;
+    max-width: 80px !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+
+  .elementor-element.elementor-element-562f9e3 .elementor-icon-box-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 4px !important;
+  }
+
+  .elementor-element.elementor-element-562f9e3 .elementor-icon-box-icon {
+    margin: 0 !important;
+    text-align: center !important;
+  }
+
+  .elementor-element.elementor-element-562f9e3 .elementor-icon-box-icon i {
+    font-size: 22px !important;
+    color: #111827 !important;
+  }
+
+  .elementor-element.elementor-element-562f9e3 .elementor-icon-box-title {
+    margin: 0 !important;
+    text-align: center !important;
+  }
+
+  .elementor-element.elementor-element-562f9e3 .elementor-icon-box-title a {
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    color: #4b5563 !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+  }
+
+  /* ----------------------------------------------------
+     ROW 4: Copyright & Legal (Clear WhatsApp Widget)
+     ---------------------------------------------------- */
+  .elementor-element.elementor-element-67aee09 {
+    padding: 20px 16px 85px 16px !important;
+    text-align: center !important;
+    background-color: #f9fafb !important;
+    border-top: 1px solid #eef0f4 !important;
+  }
+
+  .elementor-element.elementor-element-67aee09 .elementor-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+
+  .elementor-element.elementor-element-a7b4300 .elementor-heading-title {
+    font-size: 12px !important;
+    color: #6b7280 !important;
+    text-align: center !important;
+    line-height: 1.5 !important;
+  }
+
+  .elementor-element.elementor-element-b9cac5e .elementor-nav-menu--main {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 16px !important;
+  }
+
+  .elementor-element.elementor-element-b9cac5e .elementor-item {
+    font-size: 12px !important;
+    color: #4b5563 !important;
+    text-decoration: underline !important;
+  }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Office ID Card – Arafat Iqbal</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, Helvetica, sans-serif; background: #f0f4fb; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; gap: 60px; }
+  h1 { font-size: 14pt; color: #1a3c6e; margin-bottom: -40px; font-family: 'Times New Roman', Times, serif; }
+
+  /* ===== ID CARD ===== */
+  .id-card-wrap { display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap; justify-content: center; }
+
+  .id-card {
+    width: 85.6mm; /* standard CR80 card width */
+    height: 54mm;  /* standard CR80 card height */
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* --- FRONT --- */
+  .id-card.front { background: linear-gradient(135deg, #1a3c6e 0%, #2a5ba8 60%, #1a3c6e 100%); color: #fff; }
+  .id-card.front .top-bar { background: rgba(255,255,255,0.12); padding: 5px 10px; display: flex; justify-content: space-between; align-items: center; }
+  .id-card.front .top-bar .company { font-size: 9pt; font-weight: bold; letter-spacing: 0.5px; }
+  .id-card.front .top-bar .emp-id-badge { background: rgba(255,255,255,0.2); border-radius: 3px; padding: 1px 7px; font-size: 7pt; font-weight: bold; }
+  .id-card.front .content { display: flex; flex: 1; padding: 8px 10px; gap: 10px; align-items: center; }
+  .photo-box { width: 52px; height: 62px; border: 2px solid rgba(255,255,255,0.5); border-radius: 4px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 6.5pt; color: rgba(255,255,255,0.7); text-align: center; flex-shrink: 0; }
+  .emp-details { flex: 1; }
+  .emp-name { font-size: 11pt; font-weight: bold; margin-bottom: 3px; }
+  .emp-title { font-size: 7.5pt; color: rgba(255,255,255,0.8); margin-bottom: 6px; letter-spacing: 0.3px; }
+  .emp-detail-row { font-size: 7pt; color: rgba(255,255,255,0.75); margin-bottom: 2px; }
+  .emp-detail-row span { font-weight: bold; color: #fff; }
+  .id-card.front .bottom-bar { background: rgba(0,0,0,0.25); padding: 4px 10px; display: flex; justify-content: space-between; align-items: center; }
+  .id-card.front .bottom-bar .contact { font-size: 6.5pt; color: rgba(255,255,255,0.8); }
+  .barcode-placeholder { display: flex; align-items: center; gap: 1px; }
+  .barcode-placeholder .bar { width: 2px; background: rgba(255,255,255,0.7); }
+
+  /* --- BACK --- */
+  .id-card.back { background: #fff; border: 2px solid #1a3c6e; }
+  .id-card.back .back-header { background: #1a3c6e; color: #fff; padding: 5px 10px; font-size: 7.5pt; font-weight: bold; text-align: center; letter-spacing: 0.5px; }
+  .id-card.back .back-content { padding: 8px 12px; flex: 1; font-size: 7pt; color: #333; line-height: 1.6; }
+  .id-card.back .back-content .row { display: flex; margin-bottom: 4px; }
+  .id-card.back .back-content .label { width: 60px; font-weight: bold; color: #1a3c6e; flex-shrink: 0; }
+  .id-card.back .emergency { background: #fef2f2; border: 1px solid #fca5a5; border-radius: 3px; padding: 4px 8px; margin: 4px 0; font-size: 6.5pt; color: #c0392b; }
+  .id-card.back .back-footer { background: #f0f4fb; padding: 4px 10px; border-top: 1px solid #dce3ef; font-size: 6pt; color: #666; text-align: center; }
+  .id-card.back .qr-placeholder { width: 36px; height: 36px; border: 1.5px solid #1a3c6e; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-size: 5pt; color: #1a3c6e; text-align: center; float: right; margin-left: 8px; }
+
+  /* Label */
+  .card-label { text-align: center; font-size: 9pt; font-weight: bold; color: #1a3c6e; margin-top: 8px; }
+
+  /* ===== VISITING CARD ===== */
+  .visiting-wrap { display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap; justify-content: center; }
+
+  .visiting-card {
+    width: 90mm; /* standard business card */
+    height: 55mm;
+    border-radius: 6px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .visiting-card.front { background: linear-gradient(135deg, #1a3c6e 0%, #2558a0 100%); color: #fff; justify-content: center; padding: 12px 16px; }
+  .visiting-card.front .vc-company { font-size: 9pt; font-weight: bold; letter-spacing: 1px; opacity: 0.85; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 6px; }
+  .visiting-card.front .vc-name { font-size: 13pt; font-weight: bold; margin-bottom: 2px; }
+  .visiting-card.front .vc-title { font-size: 8pt; opacity: 0.8; margin-bottom: 12px; }
+  .visiting-card.front .vc-contacts { font-size: 7pt; opacity: 0.85; line-height: 1.8; }
+  .visiting-card.front .vc-contacts div::before { margin-right: 6px; }
+
+  .visiting-card.back { background: #fff; border: 2px solid #1a3c6e; align-items: center; justify-content: center; padding: 10px 16px; }
+  .visiting-card.back .vc-logo-area { text-align: center; }
+  .visiting-card.back .vc-logo-text { font-size: 20pt; font-weight: bold; color: #1a3c6e; letter-spacing: 1px; }
+  .visiting-card.back .vc-logo-sub { font-size: 7pt; color: #888; margin-top: 2px; }
+  .visiting-card.back .vc-web { font-size: 8pt; color: #1a3c6e; margin-top: 10px; font-weight: bold; }
+  .visiting-card.back .vc-tagline { font-size: 6.5pt; color: #999; margin-top: 4px; font-style: italic; }
+
+  /* Print helpers */
+  @media print {
+    body { background: #fff; padding: 20px; }
+    .id-card, .visiting-card { box-shadow: none; border: 1px solid #ccc; }
+  }
+</style>
+</head>
+<body>
+
+<h1>CRAFTSMEN IT — Employee ID Card</h1>
+
+<div class="id-card-wrap">
+
+  <!-- FRONT -->
+  <div>
+    <div class="id-card front">
+      <div class="top-bar">
+        <div class="company">✦ CRAFTSMEN IT</div>
+        <div class="emp-id-badge">CMI0034</div>
+      </div>
+      <div class="content">
+        <div class="photo-box">PHOTO<br>HERE<br>35×45mm</div>
+        <div class="emp-details">
+          <div class="emp-name">Arafat Iqbal</div>
+          <div class="emp-title">Trainee Software Engineer</div>
+          <div class="emp-detail-row">ID: <span>CMI0034</span></div>
+          <div class="emp-detail-row">Dept: <span>Software Engineering</span></div>
+          <div class="emp-detail-row">Joined: <span>19 Feb 2025</span></div>
+          <div class="emp-detail-row">Blood Grp: <span>[BLOOD_GROUP]</span></div>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <div class="contact">contact@craftsmenit.com | +966-59-787-9394</div>
+        <div class="barcode-placeholder">
+          <div class="bar" style="height:14px;"></div><div class="bar" style="height:10px;"></div>
+          <div class="bar" style="height:16px;"></div><div class="bar" style="height:10px;"></div>
+          <div class="bar" style="height:14px;"></div><div class="bar" style="height:12px;"></div>
+          <div class="bar" style="height:16px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-label">FRONT</div>
+  </div>
+
+  <!-- BACK -->
+  <div>
+    <div class="id-card back">
+      <div class="back-header">CRAFTSMEN IT — EMPLOYEE IDENTIFICATION</div>
+      <div class="back-content">
+        <div class="qr-placeholder">QR<br>CODE</div>
+        <div class="row"><div class="label">Name:</div><div>Arafat Iqbal</div></div>
+        <div class="row"><div class="label">Emp ID:</div><div>CMI0034</div></div>
+        <div class="row"><div class="label">DOJ:</div><div>19 February 2025</div></div>
+        <div class="row"><div class="label">Email:</div><div>arafat@craftsmenit.com</div></div>
+        <div class="emergency">
+          ☎ Emergency Contact: [EMERGENCY_CONTACT_NAME] — [PHONE]
+        </div>
+      </div>
+      <div class="back-footer">If found, please return to Craftsmen IT | www.craftsmenit.com</div>
+    </div>
+    <div class="card-label">BACK</div>
+  </div>
+
+</div>
+
+<!-- ===== VISITING / BUSINESS CARD ===== -->
+<h1 style="margin-top:10px; margin-bottom:-30px;">CRAFTSMEN IT — Visiting / Business Card</h1>
+
+<div class="visiting-wrap">
+
+  <!-- FRONT -->
+  <div>
+    <div class="visiting-card front">
+      <div class="vc-company">CRAFTSMEN IT</div>
+      <div class="vc-name">Arafat Iqbal</div>
+      <div class="vc-title">Trainee Software Engineer</div>
+      <div class="vc-contacts">
+        <div>📧 arafat@craftsmenit.com</div>
+        <div>📞 +966-59-787-9394</div>
+        <div>🌐 www.craftsmenit.com</div>
+      </div>
+    </div>
+    <div class="card-label">FRONT</div>
+  </div>
+
+  <!-- BACK -->
+  <div>
+    <div class="visiting-card back">
+      <div class="vc-logo-area">
+        <div class="vc-logo-text">CRAFTSMEN IT</div>
+        <div class="vc-logo-sub">IT Services &amp; Solutions</div>
+        <div class="vc-web">www.craftsmenit.com</div>
+        <div class="vc-tagline">"The right technology, implemented properly."</div>
+      </div>
+    </div>
+    <div class="card-label">BACK</div>
+  </div>
+
+</div>
+
+<p style="font-size:9pt; color:#888; text-align:center; max-width:400px;">
+  Print at actual size (100%). ID card: 85.6×54mm (standard CR80). Business card: 90×55mm.<br>
+  Replace all <strong>[PLACEHOLDER]</strong> values with actual data before printing.
+</p>
+
+</body>
+</html>

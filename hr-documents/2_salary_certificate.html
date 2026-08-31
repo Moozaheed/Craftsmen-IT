@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salary Certificate – Arafat Iqbal</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Times New Roman', Times, serif; font-size: 12pt; color: #111; background: #f4f4f4; }
+  .page { width: 210mm; min-height: 297mm; margin: 20px auto; background: #fff; padding: 25mm 20mm 20mm 20mm; box-shadow: 0 0 12px rgba(0,0,0,0.15); position: relative; }
+  .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #1a3c6e; padding-bottom: 12px; margin-bottom: 10px; }
+  .company-name { font-size: 22pt; font-weight: bold; color: #1a3c6e; letter-spacing: 1px; }
+  .company-tagline { font-size: 8.5pt; color: #555; margin-top: 2px; }
+  .company-contact { text-align: right; font-size: 8.5pt; color: #444; line-height: 1.6; }
+  .ref-date { display: flex; justify-content: space-between; margin: 18px 0 10px; font-size: 10.5pt; }
+  .doc-title { text-align: center; font-size: 15pt; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; color: #1a3c6e; margin: 22px 0 18px; text-decoration: underline; }
+  .body-text { line-height: 1.85; font-size: 11.5pt; text-align: justify; }
+  .body-text p { margin-bottom: 14px; }
+  .highlight { font-weight: bold; }
+  table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 11pt; }
+  th { background: #1a3c6e; color: #fff; padding: 8px 12px; text-align: left; font-weight: 600; }
+  td { padding: 8px 12px; border-bottom: 1px solid #dce3ef; }
+  tr:nth-child(even) td { background: #f0f4fb; }
+  td.amount { text-align: right; font-weight: bold; }
+  .total-row td { background: #1a3c6e !important; color: #fff; font-weight: bold; font-size: 11.5pt; }
+  .salary-box { border: 2px solid #1a3c6e; border-radius: 6px; padding: 16px 20px; margin: 20px 0; background: #f0f4fb; }
+  .salary-box .label { font-size: 10pt; color: #555; margin-bottom: 4px; }
+  .salary-box .amount-big { font-size: 16pt; font-weight: bold; color: #1a3c6e; }
+  .sig-block { margin-top: 45px; display: flex; justify-content: space-between; }
+  .sig-col { text-align: center; width: 40%; }
+  .sig-line { border-top: 1.5px solid #333; margin-bottom: 6px; margin-top: 35px; }
+  .sig-label { font-size: 10pt; font-weight: bold; }
+  .sig-sub { font-size: 9.5pt; color: #444; }
+  .stamp { width: 90px; height: 90px; border: 2.5px dashed #1a3c6e; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 8pt; color: #1a3c6e; text-align: center; margin: 0 auto; }
+  .footer { position: absolute; bottom: 14mm; left: 20mm; right: 20mm; border-top: 1.5px solid #1a3c6e; padding-top: 7px; display: flex; justify-content: space-between; font-size: 8.5pt; color: #666; }
+  .note { font-size: 9.5pt; font-style: italic; color: #555; border-left: 3px solid #1a3c6e; padding-left: 10px; margin-top: 10px; }
+  @media print { body { background: #fff; } .page { margin: 0; box-shadow: none; width: 100%; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div>
+      <div class="company-name">CRAFTSMEN IT</div>
+      <div class="company-tagline">IT Services &amp; Solutions | UAE &amp; Saudi Arabia</div>
+    </div>
+    <div class="company-contact">
+      E: contact@craftsmenit.com<br>
+      T: +966-59-787-9394<br>
+      www.craftsmenit.com
+    </div>
+  </div>
+
+  <div class="ref-date">
+    <span><strong>Ref No:</strong> CMI/HR/SC/2026/034</span>
+    <span><strong>Date:</strong> August 29, 2026</span>
+  </div>
+
+  <div class="doc-title">Salary Certificate</div>
+
+  <div class="body-text">
+    <p>To Whom It May Concern,</p>
+
+    <p>This is to certify that <span class="highlight">Mr. Arafat Iqbal</span>, Employee ID <span class="highlight">CMI0034</span>, is currently employed with <span class="highlight">Craftsmen IT</span> in the capacity of <span class="highlight">Trainee Software Engineer</span> since <span class="highlight">19 February 2025</span>.</p>
+
+    <p>His monthly compensation package as of the date of this certificate is detailed below:</p>
+
+    <table>
+      <tr><th>Component</th><th style="text-align:right;">Amount (SAR)</th></tr>
+      <tr><td>Basic Salary</td><td class="amount">SAR [BASIC_SALARY]</td></tr>
+      <tr><td>Housing Allowance</td><td class="amount">SAR [HOUSING_ALLOWANCE]</td></tr>
+      <tr><td>Transportation Allowance</td><td class="amount">SAR [TRANSPORT_ALLOWANCE]</td></tr>
+      <tr><td>Other Allowances</td><td class="amount">SAR [OTHER_ALLOWANCES]</td></tr>
+      <tr class="total-row"><td>Total Gross Salary</td><td class="amount">SAR [TOTAL_GROSS]</td></tr>
+    </table>
+
+    <div class="salary-box">
+      <div class="label">Total Monthly Gross Salary (in words):</div>
+      <div class="amount-big">SAR [TOTAL_IN_WORDS] Only</div>
+    </div>
+
+    <p>His salary is credited directly to his designated bank account on a monthly basis. The above figures represent his gross compensation before any applicable statutory deductions.</p>
+
+    <p>This certificate is issued at the specific request of the employee and is valid for the purpose for which it has been requested.</p>
+
+    <div class="note">Note: This certificate is confidential and intended solely for the use of the addressee. Any reproduction or disclosure without written authorization from Craftsmen IT is prohibited.</div>
+  </div>
+
+  <div class="sig-block">
+    <div class="sig-col">
+      <div class="stamp">OFFICIAL<br>SEAL</div>
+    </div>
+    <div class="sig-col">
+      <div class="sig-line"></div>
+      <div class="sig-label">Authorized Signatory</div>
+      <div class="sig-sub">Finance &amp; Human Resources</div>
+      <div class="sig-sub">Craftsmen IT</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Craftsmen IT | IT Services Company in UAE &amp; Saudi Arabia</span>
+    <span>Page 1 of 1 | Ref: CMI/HR/SC/2026/034</span>
+  </div>
+
+</div>
+</body>
+</html>

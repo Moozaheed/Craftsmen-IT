@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pay Slips – Last 6 Months – Arafat Iqbal</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, Helvetica, sans-serif; font-size: 10.5pt; color: #111; background: #f4f4f4; }
+  .payslip { width: 210mm; margin: 20px auto; background: #fff; padding: 14mm 16mm 10mm 16mm; box-shadow: 0 0 10px rgba(0,0,0,0.13); page-break-after: always; }
+  /* Header */
+  .ps-header { display: flex; justify-content: space-between; align-items: center; background: #1a3c6e; color: #fff; padding: 12px 16px; border-radius: 4px 4px 0 0; margin-bottom: 0; }
+  .ps-company { font-size: 15pt; font-weight: bold; letter-spacing: 0.5px; }
+  .ps-company-sub { font-size: 7.5pt; opacity: 0.85; margin-top: 2px; }
+  .ps-title { font-size: 11pt; font-weight: bold; text-align: right; }
+  .ps-title-sub { font-size: 9pt; opacity: 0.85; margin-top: 3px; }
+  /* Employee info bar */
+  .ps-infobar { display: flex; justify-content: space-between; background: #e8edf5; padding: 9px 16px; font-size: 9.5pt; border-bottom: 2px solid #1a3c6e; }
+  .ps-infobar span { display: block; }
+  .ps-infobar strong { color: #1a3c6e; }
+  /* Tables */
+  .ps-tables { display: flex; gap: 12px; margin: 12px 0; }
+  .ps-table-wrap { flex: 1; }
+  .ps-table-title { background: #1a3c6e; color: #fff; font-weight: bold; padding: 5px 10px; font-size: 9.5pt; }
+  table { width: 100%; border-collapse: collapse; font-size: 9.5pt; }
+  td { padding: 5px 10px; border-bottom: 1px solid #e0e6f0; }
+  td.amount { text-align: right; }
+  tr:nth-child(even) td { background: #f4f7fc; }
+  .total-row td { background: #1a3c6e !important; color: #fff; font-weight: bold; font-size: 10pt; }
+  .total-row td.amount { text-align: right; }
+  /* Net pay box */
+  .net-pay { background: #1a3c6e; color: #fff; border-radius: 4px; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; margin: 10px 0; }
+  .net-pay .label { font-size: 10pt; }
+  .net-pay .value { font-size: 14pt; font-weight: bold; }
+  /* Note */
+  .ps-note { font-size: 8pt; color: #666; margin-top: 8px; font-style: italic; border-top: 1px solid #ddd; padding-top: 6px; }
+  /* Sig */
+  .ps-sig { display: flex; justify-content: space-between; margin-top: 14px; }
+  .ps-sig-col { text-align: center; }
+  .ps-sig-line { border-top: 1.5px solid #333; margin-bottom: 4px; margin-top: 24px; width: 120px; }
+  .ps-sig-label { font-size: 8.5pt; font-weight: bold; }
+
+  @media print {
+    body { background: #fff; }
+    .payslip { margin: 0; box-shadow: none; width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ======= PAYSLIP 1: MARCH 2026 ======= -->
+<div class="payslip">
+  <div class="ps-header">
+    <div>
+      <div class="ps-company">CRAFTSMEN IT</div>
+      <div class="ps-company-sub">IT Services &amp; Solutions | UAE &amp; Saudi Arabia</div>
+    </div>
+    <div>
+      <div class="ps-title">PAY SLIP</div>
+      <div class="ps-title-sub">Month of March 2026</div>
+    </div>
+  </div>
+  <div class="ps-infobar">
+    <div><strong>Employee Name:</strong> Arafat Iqbal</div>
+    <div><strong>Employee ID:</strong> CMI0034</div>
+    <div><strong>Designation:</strong> Trainee Software Engineer</div>
+    <div><strong>Pay Period:</strong> 01 Mar 2026 – 31 Mar 2026</div>
+  </div>
+  <div class="ps-tables">
+    <div class="ps-table-wrap">
+      <div class="ps-table-title">EARNINGS</div>
+      <table>
+        <tr><td>Basic Salary</td><td class="amount">SAR [BASIC]</td></tr>
+        <tr><td>Housing Allowance</td><td class="amount">SAR [HOUSING]</td></tr>
+        <tr><td>Transportation Allowance</td><td class="amount">SAR [TRANSPORT]</td></tr>
+        <tr><td>Other Allowances</td><td class="amount">SAR [OTHER]</td></tr>
+        <tr class="total-row"><td>Total Earnings</td><td class="amount">SAR [TOTAL_EARN]</td></tr>
+      </table>
+    </div>
+    <div class="ps-table-wrap">
+      <div class="ps-table-title">DEDUCTIONS</div>
+      <table>
+        <tr><td>GOSI / Pension</td><td class="amount">SAR [GOSI]</td></tr>
+        <tr><td>Absence Deduction</td><td class="amount">SAR 0.00</td></tr>
+        <tr><td>Loan / Advance</td><td class="amount">SAR 0.00</td></tr>
+        <tr><td>Other Deductions</td><td class="amount">SAR 0.00</td></tr>
+        <tr class="total-row"><td>Total Deductions</td><td class="amount">SAR [TOTAL_DED]</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="net-pay">
+    <div class="label">NET PAY FOR MARCH 2026</div>
+    <div class="value">SAR [NET_PAY]</div>
+  </div>
+  <div class="ps-note">Amount in Words: SAR [NET_PAY_WORDS] Only | Payment Mode: Bank Transfer | This is a computer-generated document.</div>
+  <div class="ps-sig">
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">Employee Signature</div></div>
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">HR / Accounts</div></div>
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">Authorized Signatory</div></div>
+  </div>
+</div>
+
+<!-- ======= PAYSLIP 2: APRIL 2026 ======= -->
+<div class="payslip">
+  <div class="ps-header">
+    <div>
+      <div class="ps-company">CRAFTSMEN IT</div>
+      <div class="ps-company-sub">IT Services &amp; Solutions | UAE &amp; Saudi Arabia</div>
+    </div>
+    <div>
+      <div class="ps-title">PAY SLIP</div>
+      <div class="ps-title-sub">Month of April 2026</div>
+    </div>
+  </div>
+  <div class="ps-infobar">
+    <div><strong>Employee Name:</strong> Arafat Iqbal</div>
+    <div><strong>Employee ID:</strong> CMI0034</div>
+    <div><strong>Designation:</strong> Trainee Software Engineer</div>
+    <div><strong>Pay Period:</strong> 01 Apr 2026 – 30 Apr 2026</div>
+  </div>
+  <div class="ps-tables">
+    <div class="ps-table-wrap">
+      <div class="ps-table-title">EARNINGS</div>
+      <table>
+        <tr><td>Basic Salary</td><td class="amount">SAR [BASIC]</td></tr>
+        <tr><td>Housing Allowance</td><td class="amount">SAR [HOUSING]</td></tr>
+        <tr><td>Transportation Allowance</td><td class="amount">SAR [TRANSPORT]</td></tr>
+        <tr><td>Other Allowances</td><td class="amount">SAR [OTHER]</td></tr>
+        <tr class="total-row"><td>Total Earnings</td><td class="amount">SAR [TOTAL_EARN]</td></tr>
+      </table>
+    </div>
+    <div class="ps-table-wrap">
+      <div class="ps-table-title">DEDUCTIONS</div>
+      <table>
+        <tr><td>GOSI / Pension</td><td class="amount">SAR [GOSI]</td></tr>
+        <tr><td>Absence Deduction</td><td class="amount">SAR 0.00</td></tr>
+        <tr><td>Loan / Advance</td><td class="amount">SAR 0.00</td></tr>
+        <tr><td>Other Deductions</td><td class="amount">SAR 0.00</td></tr>
+        <tr class="total-row"><td>Total Deductions</td><td class="amount">SAR [TOTAL_DED]</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="net-pay">
+    <div class="label">NET PAY FOR APRIL 2026</div>
+    <div class="value">SAR [NET_PAY]</div>
+  </div>
+  <div class="ps-note">Amount in Words: SAR [NET_PAY_WORDS] Only | Payment Mode: Bank Transfer | This is a computer-generated document.</div>
+  <div class="ps-sig">
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">Employee Signature</div></div>
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">HR / Accounts</div></div>
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">Authorized Signatory</div></div>
+  </div>
+</div>
+
+<!-- ======= PAYSLIP 3: MAY 2026 ======= -->
+<div class="payslip">
+  <div class="ps-header">
+    <div>
+      <div class="ps-company">CRAFTSMEN IT</div>
+      <div class="ps-company-sub">IT Services &amp; Solutions | UAE &amp; Saudi Arabia</div>
+    </div>
+    <div>
+      <div class="ps-title">PAY SLIP</div>
+      <div class="ps-title-sub">Month of May 2026</div>
+    </div>
+  </div>
+  <div class="ps-infobar">
+    <div><strong>Employee Name:</strong> Arafat Iqbal</div>
+    <div><strong>Employee ID:</strong> CMI0034</div>
+    <div><strong>Designation:</strong> Trainee Software Engineer</div>
+    <div><strong>Pay Period:</strong> 01 May 2026 – 31 May 2026</div>
+  </div>
+  <div class="ps-tables">
+    <div class="ps-table-wrap">
+      <div class="ps-table-title">EARNINGS</div>
+      <table>
+        <tr><td>Basic Salary</td><td class="amount">SAR [BASIC]</td></tr>
+        <tr><td>Housing Allowance</td><td class="amount">SAR [HOUSING]</td></tr>
+        <tr><td>Transportation Allowance</td><td class="amount">SAR [TRANSPORT]</td></tr>
+        <tr><td>Other Allowances</td><td class="amount">SAR [OTHER]</td></tr>
+        <tr class="total-row"><td>Total Earnings</td><td class="amount">SAR [TOTAL_EARN]</td></tr>
+      </table>
+    </div>
+    <div class="ps-table-wrap">
+      <div class="ps-table-title">DEDUCTIONS</div>
+      <table>
+        <tr><td>GOSI / Pension</td><td class="amount">SAR [GOSI]</td></tr>
+        <tr><td>Absence Deduction</td><td class="amount">SAR 0.00</td></tr>
+        <tr><td>Loan / Advance</td><td class="amount">SAR 0.00</td></tr>
+        <tr><td>Other Deductions</td><td class="amount">SAR 0.00</td></tr>
+        <tr class="total-row"><td>Total Deductions</td><td class="amount">SAR [TOTAL_DED]</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="net-pay">
+    <div class="label">NET PAY FOR MAY 2026</div>
+    <div class="value">SAR [NET_PAY]</div>
+  </div>
+  <div class="ps-note">Amount in Words: SAR [NET_PAY_WORDS] Only | Payment Mode: Bank Transfer | This is a computer-generated document.</div>
+  <div class="ps-sig">
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">Employee Signature</div></div>
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">HR / Accounts</div></div>
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">Authorized Signatory</div></div>
+  </div>
+</div>
+
+<!-- ======= PAYSLIP 4: JUNE 2026 ======= -->
+<div class="payslip">
+  <div class="ps-header">
+    <div>
+      <div class="ps-company">CRAFTSMEN IT</div>
+      <div class="ps-company-sub">IT Services &amp; Solutions | UAE &amp; Saudi Arabia</div>
+    </div>
+    <div>
+      <div class="ps-title">PAY SLIP</div>
+      <div class="ps-title-sub">Month of June 2026</div>
+    </div>
+  </div>
+  <div class="ps-infobar">
+    <div><strong>Employee Name:</strong> Arafat Iqbal</div>
+    <div><strong>Employee ID:</strong> CMI0034</div>
+    <div><strong>Designation:</strong> Trainee Software Engineer</div>
+    <div><strong>Pay Period:</strong> 01 Jun 2026 – 30 Jun 2026</div>
+  </div>
+  <div class="ps-tables">
+    <div class="ps-table-wrap">
+      <div class="ps-table-title">EARNINGS</div>
+      <table>
+        <tr><td>Basic Salary</td><td class="amount">SAR [BASIC]</td></tr>
+        <tr><td>Housing Allowance</td><td class="amount">SAR [HOUSING]</td></tr>
+        <tr><td>Transportation Allowance</td><td class="amount">SAR [TRANSPORT]</td></tr>
+        <tr><td>Other Allowances</td><td class="amount">SAR [OTHER]</td></tr>
+        <tr class="total-row"><td>Total Earnings</td><td class="amount">SAR [TOTAL_EARN]</td></tr>
+      </table>
+    </div>
+    <div class="ps-table-wrap">
+      <div class="ps-table-title">DEDUCTIONS</div>
+      <table>
+        <tr><td>GOSI / Pension</td><td class="amount">SAR [GOSI]</td></tr>
+        <tr><td>Absence Deduction</td><td class="amount">SAR 0.00</td></tr>
+        <tr><td>Loan / Advance</td><td class="amount">SAR 0.00</td></tr>
+        <tr><td>Other Deductions</td><td class="amount">SAR 0.00</td></tr>
+        <tr class="total-row"><td>Total Deductions</td><td class="amount">SAR [TOTAL_DED]</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="net-pay">
+    <div class="label">NET PAY FOR JUNE 2026</div>
+    <div class="value">SAR [NET_PAY]</div>
+  </div>
+  <div class="ps-note">Amount in Words: SAR [NET_PAY_WORDS] Only | Payment Mode: Bank Transfer | This is a computer-generated document.</div>
+  <div class="ps-sig">
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">Employee Signature</div></div>
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">HR / Accounts</div></div>
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">Authorized Signatory</div></div>
+  </div>
+</div>
+
+<!-- ======= PAYSLIP 5: JULY 2026 ======= -->
+<div class="payslip">
+  <div class="ps-header">
+    <div>
+      <div class="ps-company">CRAFTSMEN IT</div>
+      <div class="ps-company-sub">IT Services &amp; Solutions | UAE &amp; Saudi Arabia</div>
+    </div>
+    <div>
+      <div class="ps-title">PAY SLIP</div>
+      <div class="ps-title-sub">Month of July 2026</div>
+    </div>
+  </div>
+  <div class="ps-infobar">
+    <div><strong>Employee Name:</strong> Arafat Iqbal</div>
+    <div><strong>Employee ID:</strong> CMI0034</div>
+    <div><strong>Designation:</strong> Trainee Software Engineer</div>
+    <div><strong>Pay Period:</strong> 01 Jul 2026 – 31 Jul 2026</div>
+  </div>
+  <div class="ps-tables">
+    <div class="ps-table-wrap">
+      <div class="ps-table-title">EARNINGS</div>
+      <table>
+        <tr><td>Basic Salary</td><td class="amount">SAR [BASIC]</td></tr>
+        <tr><td>Housing Allowance</td><td class="amount">SAR [HOUSING]</td></tr>
+        <tr><td>Transportation Allowance</td><td class="amount">SAR [TRANSPORT]</td></tr>
+        <tr><td>Other Allowances</td><td class="amount">SAR [OTHER]</td></tr>
+        <tr class="total-row"><td>Total Earnings</td><td class="amount">SAR [TOTAL_EARN]</td></tr>
+      </table>
+    </div>
+    <div class="ps-table-wrap">
+      <div class="ps-table-title">DEDUCTIONS</div>
+      <table>
+        <tr><td>GOSI / Pension</td><td class="amount">SAR [GOSI]</td></tr>
+        <tr><td>Absence Deduction</td><td class="amount">SAR 0.00</td></tr>
+        <tr><td>Loan / Advance</td><td class="amount">SAR 0.00</td></tr>
+        <tr><td>Other Deductions</td><td class="amount">SAR 0.00</td></tr>
+        <tr class="total-row"><td>Total Deductions</td><td class="amount">SAR [TOTAL_DED]</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="net-pay">
+    <div class="label">NET PAY FOR JULY 2026</div>
+    <div class="value">SAR [NET_PAY]</div>
+  </div>
+  <div class="ps-note">Amount in Words: SAR [NET_PAY_WORDS] Only | Payment Mode: Bank Transfer | This is a computer-generated document.</div>
+  <div class="ps-sig">
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">Employee Signature</div></div>
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">HR / Accounts</div></div>
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">Authorized Signatory</div></div>
+  </div>
+</div>
+
+<!-- ======= PAYSLIP 6: AUGUST 2026 ======= -->
+<div class="payslip">
+  <div class="ps-header">
+    <div>
+      <div class="ps-company">CRAFTSMEN IT</div>
+      <div class="ps-company-sub">IT Services &amp; Solutions | UAE &amp; Saudi Arabia</div>
+    </div>
+    <div>
+      <div class="ps-title">PAY SLIP</div>
+      <div class="ps-title-sub">Month of August 2026</div>
+    </div>
+  </div>
+  <div class="ps-infobar">
+    <div><strong>Employee Name:</strong> Arafat Iqbal</div>
+    <div><strong>Employee ID:</strong> CMI0034</div>
+    <div><strong>Designation:</strong> Trainee Software Engineer</div>
+    <div><strong>Pay Period:</strong> 01 Aug 2026 – 31 Aug 2026</div>
+  </div>
+  <div class="ps-tables">
+    <div class="ps-table-wrap">
+      <div class="ps-table-title">EARNINGS</div>
+      <table>
+        <tr><td>Basic Salary</td><td class="amount">SAR [BASIC]</td></tr>
+        <tr><td>Housing Allowance</td><td class="amount">SAR [HOUSING]</td></tr>
+        <tr><td>Transportation Allowance</td><td class="amount">SAR [TRANSPORT]</td></tr>
+        <tr><td>Other Allowances</td><td class="amount">SAR [OTHER]</td></tr>
+        <tr class="total-row"><td>Total Earnings</td><td class="amount">SAR [TOTAL_EARN]</td></tr>
+      </table>
+    </div>
+    <div class="ps-table-wrap">
+      <div class="ps-table-title">DEDUCTIONS</div>
+      <table>
+        <tr><td>GOSI / Pension</td><td class="amount">SAR [GOSI]</td></tr>
+        <tr><td>Absence Deduction</td><td class="amount">SAR 0.00</td></tr>
+        <tr><td>Loan / Advance</td><td class="amount">SAR 0.00</td></tr>
+        <tr><td>Other Deductions</td><td class="amount">SAR 0.00</td></tr>
+        <tr class="total-row"><td>Total Deductions</td><td class="amount">SAR [TOTAL_DED]</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="net-pay">
+    <div class="label">NET PAY FOR AUGUST 2026</div>
+    <div class="value">SAR [NET_PAY]</div>
+  </div>
+  <div class="ps-note">Amount in Words: SAR [NET_PAY_WORDS] Only | Payment Mode: Bank Transfer | This is a computer-generated document.</div>
+  <div class="ps-sig">
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">Employee Signature</div></div>
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">HR / Accounts</div></div>
+    <div class="ps-sig-col"><div class="ps-sig-line"></div><div class="ps-sig-label">Authorized Signatory</div></div>
+  </div>
+</div>
+
+</body>
+</html>
