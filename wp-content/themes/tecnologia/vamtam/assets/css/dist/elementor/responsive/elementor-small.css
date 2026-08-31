@@ -497,7 +497,7 @@ html.ios-safari .elementor-widget-tabs.vamtam-has-theme-widget-styles.vamtam-for
 }
 
 /* ==========================================================================
-   PREMIER FOOTER CLEANUP - PERFECT CONTINUOUS BORDERS & ALIGNMENT
+   PREMIER FOOTER CLEANUP - PERFECT SEAMLESS ALIGNMENT & EQUAL HEIGHTS
    ========================================================================== */
 
 .elementor-element.elementor-element-40daad3 .elementor-widget-wrap,
@@ -549,8 +549,8 @@ html.ios-safari .elementor-widget-tabs.vamtam-has-theme-widget-styles.vamtam-for
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    padding: 0 0 18px 0 !important;
-    margin: 0 0 18px 0 !important;
+    padding: 0 0 16px 0 !important;
+    margin: 0 0 0 0 !important;
     border-bottom: 1px solid #eef0f4 !important;
     border-top: none !important;
     border-left: none !important;
@@ -577,26 +577,9 @@ html.ios-safari .elementor-widget-tabs.vamtam-has-theme-widget-styles.vamtam-for
   }
 
   /* ----------------------------------------------------
-     ROW 2: Locations & Contact Info (Side by Side 50/50 Equal Height)
+     ROW 2: Locations & Contact Info (100% Equal Height Single Row)
      ---------------------------------------------------- */
-  .elementor-element.elementor-element-5686166 {
-    width: 50% !important;
-    max-width: 50% !important;
-    flex: 0 0 50% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    padding: 0 8px 18px 0 !important;
-    margin: 0 0 18px 0 !important;
-    border-bottom: 1px solid #eef0f4 !important;
-    border-right: 1px solid #eef0f4 !important;
-    border-top: none !important;
-    border-left: none !important;
-    box-sizing: border-box !important;
-  }
-
+  .elementor-element.elementor-element-5686166,
   .elementor-element.elementor-element-a88df03 {
     width: 50% !important;
     max-width: 50% !important;
@@ -605,37 +588,25 @@ html.ios-safari .elementor-widget-tabs.vamtam-has-theme-widget-styles.vamtam-for
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
-    text-align: center !important;
-    padding: 0 0 18px 8px !important;
-    margin: 0 0 18px 0 !important;
+    align-self: stretch !important;
+    padding: 16px 8px !important;
+    margin: 0 !important;
     border-bottom: 1px solid #eef0f4 !important;
     border-top: none !important;
     border-left: none !important;
-    border-right: none !important;
     box-sizing: border-box !important;
   }
 
+  .elementor-element.elementor-element-5686166 {
+    border-right: 1px solid #eef0f4 !important;
+  }
+
+  .elementor-element.elementor-element-a88df03 {
+    border-right: none !important;
+  }
+
   .elementor-element.elementor-element-5686166 .elementor-widget-wrap,
-  .elementor-element.elementor-element-5686166 .elementor-element-populated {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    width: 100% !important;
-    height: 100% !important;
-    border: none !important;
-  }
-
-  .elementor-element.elementor-element-5686166 p {
-    font-size: 13px !important;
-    line-height: 1.5 !important;
-    text-align: center !important;
-    margin: 0 !important;
-    font-weight: 600 !important;
-    color: #111827 !important;
-  }
-
+  .elementor-element.elementor-element-5686166 .elementor-element-populated,
   .elementor-element.elementor-element-a88df03 .elementor-widget-wrap,
   .elementor-element.elementor-element-a88df03 .elementor-element-populated {
     display: flex !important;
@@ -645,18 +616,35 @@ html.ios-safari .elementor-widget-tabs.vamtam-has-theme-widget-styles.vamtam-for
     text-align: center !important;
     width: 100% !important;
     height: 100% !important;
-    gap: 4px !important;
+    margin: 0 !important;
+    padding: 0 !important;
     border: none !important;
+  }
+
+  .elementor-element.elementor-element-5686166 p {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-weight: 600 !important;
+    color: #111827 !important;
   }
 
   .elementor-element.elementor-element-a88df03 .elementor-widget {
     margin: 0 !important;
+    padding: 0 !important;
     width: 100% !important;
     text-align: center !important;
   }
 
+  .elementor-element.elementor-element-a88df03 .elementor-widget:not(:last-child) {
+    margin-bottom: 4px !important;
+  }
+
   .elementor-element.elementor-element-a88df03 .elementor-button {
     padding: 0 !important;
+    margin: 0 !important;
     background: transparent !important;
     font-size: 13px !important;
     font-weight: 500 !important;
@@ -664,7 +652,7 @@ html.ios-safari .elementor-widget-tabs.vamtam-has-theme-widget-styles.vamtam-for
     text-align: center !important;
     justify-content: center !important;
     display: inline-flex !important;
-    line-height: 1.4 !important;
+    line-height: 1.5 !important;
   }
 
   /* ----------------------------------------------------
@@ -677,7 +665,7 @@ html.ios-safari .elementor-widget-tabs.vamtam-has-theme-widget-styles.vamtam-for
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    padding: 0 !important;
+    padding: 16px 0 0 0 !important;
     margin: 0 auto !important;
     border: none !important;
   }
