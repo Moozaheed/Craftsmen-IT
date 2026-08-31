@@ -1103,34 +1103,37 @@ header .site-logo img {
 }
 
 /* ==========================================================================
-   PREMIER FOOTER CLEANUP - PERFECT SEAMLESS ALIGNMENT & EQUAL HEIGHTS
+   PREMIER FOOTER - PERFECT PIXEL-ALIGNED ROW & CENTERED COPYRIGHT
    ========================================================================== */
 
-.elementor-element.elementor-element-40daad3 .elementor-widget-wrap,
-.elementor-element.elementor-element-40daad3 .elementor-element-populated,
-.elementor-element.elementor-element-40daad3 .elementor-divider,
+/* Purge unwanted default borders/spacers with maximum specificity */
+.elementor-1273 .elementor-element.elementor-element-3708d21,
+.elementor-1273 .elementor-element.elementor-element-af4dbec,
 .elementor-element.elementor-element-3708d21,
 .elementor-element.elementor-element-af4dbec,
-.elementor-element.elementor-element-b1ac84e {
-  border: none !important;
-}
-
-.elementor-element.elementor-element-40daad3 .elementor-divider,
-.elementor-element.elementor-element-3708d21,
-.elementor-element.elementor-element-af4dbec,
+.elementor-311 .elementor-element.elementor-element-b1ac84e,
+.elementor-1273 .elementor-element.elementor-element-b1ac84e,
 .elementor-element.elementor-element-b1ac84e {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
 }
 
 .elementor-element.elementor-element-40daad3 .elementor-widget-wrap,
 .elementor-element.elementor-element-40daad3 .elementor-element-populated {
-  display: flex !important;
+  border: none !important;
 }
 
 @media (max-width: 767px) {
   /* White Card Container */
   .elementor-element.elementor-element-40daad3 {
-    padding: 24px 16px 20px 16px !important;
+    padding: 24px 12px 20px 12px !important;
     background-color: #ffffff !important;
     border-top: 1px solid #eef0f4 !important;
   }
@@ -1183,19 +1186,21 @@ header .site-logo img {
   }
 
   /* ----------------------------------------------------
-     ROW 2: Locations & Contact Info (100% Equal Height Single Row)
+     ROW 2: Locations & Contact Info (PERFECT FIXED-HEIGHT ALIGNMENT)
      ---------------------------------------------------- */
   .elementor-element.elementor-element-5686166,
   .elementor-element.elementor-element-a88df03 {
     width: 50% !important;
     max-width: 50% !important;
     flex: 0 0 50% !important;
+    height: 72px !important;
+    min-height: 72px !important;
+    max-height: 72px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
-    align-self: stretch !important;
-    padding: 16px 8px !important;
+    padding: 0 4px !important;
     margin: 0 !important;
     border-bottom: 1px solid #eef0f4 !important;
     border-top: none !important;
@@ -1224,41 +1229,71 @@ header .site-logo img {
     height: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+    gap: 6px !important;
     border: none !important;
   }
 
+  /* Exact matching typography and vertical centering */
   .elementor-element.elementor-element-5686166 p {
-    font-size: 13px !important;
-    line-height: 1.5 !important;
+    font-size: 12px !important;
+    line-height: 18px !important;
     text-align: center !important;
     margin: 0 !important;
     padding: 0 !important;
     font-weight: 600 !important;
     color: #111827 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+  }
+
+  .elementor-element.elementor-element-5686166 p span {
+    display: block !important;
+    height: 18px !important;
+    line-height: 18px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
   }
 
   .elementor-element.elementor-element-a88df03 .elementor-widget {
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
+    height: 18px !important;
     text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
 
-  .elementor-element.elementor-element-a88df03 .elementor-widget:not(:last-child) {
-    margin-bottom: 4px !important;
+  .elementor-element.elementor-element-a88df03 .elementor-widget-container,
+  .elementor-element.elementor-element-a88df03 .elementor-button-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 18px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
 
   .elementor-element.elementor-element-a88df03 .elementor-button {
     padding: 0 !important;
     margin: 0 !important;
     background: transparent !important;
-    font-size: 13px !important;
+    font-size: 12px !important;
     font-weight: 500 !important;
     color: #111827 !important;
     text-align: center !important;
     justify-content: center !important;
+    align-items: center !important;
     display: inline-flex !important;
-    line-height: 1.5 !important;
+    height: 18px !important;
+    line-height: 18px !important;
+    white-space: nowrap !important;
   }
 
   /* ----------------------------------------------------
@@ -1332,13 +1367,14 @@ header .site-logo img {
   }
 
   /* ----------------------------------------------------
-     ROW 4: Copyright & Legal (Clear WhatsApp Widget)
+     ROW 4: Copyright & Legal (100% CENTERED & WhatsApp Clearance)
      ---------------------------------------------------- */
   .elementor-element.elementor-element-67aee09 {
-    padding: 20px 16px 85px 16px !important;
+    padding: 24px 16px 85px 16px !important;
     text-align: center !important;
     background-color: #f9fafb !important;
     border-top: 1px solid #eef0f4 !important;
+    width: 100% !important;
   }
 
   .elementor-element.elementor-element-67aee09 .elementor-container {
@@ -1346,26 +1382,88 @@ header .site-logo img {
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
     gap: 8px !important;
   }
 
+  .elementor-element.elementor-element-e59cde9 {
+    width: 100% !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+  }
+
+  .elementor-element.elementor-element-e59cde9 > .elementor-widget-wrap,
+  .elementor-element.elementor-element-e59cde9 > .elementor-element-populated {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    gap: 8px !important;
+  }
+
+  .elementor-element.elementor-element-a7b4300 {
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .elementor-element.elementor-element-a7b4300 .elementor-widget-container,
   .elementor-element.elementor-element-a7b4300 .elementor-heading-title {
     font-size: 12px !important;
     color: #6b7280 !important;
     text-align: center !important;
     line-height: 1.5 !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    display: block !important;
   }
 
+  .elementor-element.elementor-element-b9cac5e {
+    width: 100% !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+  }
+
+  .elementor-element.elementor-element-b9cac5e .elementor-widget-container,
   .elementor-element.elementor-element-b9cac5e .elementor-nav-menu--main {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    text-align: center !important;
     gap: 16px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .elementor-element.elementor-element-b9cac5e .elementor-nav-menu {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
   }
 
   .elementor-element.elementor-element-b9cac5e .elementor-item {
     font-size: 12px !important;
     color: #4b5563 !important;
     text-decoration: underline !important;
+    text-align: center !important;
   }
 }
